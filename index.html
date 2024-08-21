@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Varo D'Nuts</title>
+    <!--Link ini icon dari google symbol untuk menjalankan command yang menampilkan symbol di html-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--Link ini cssnya-->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    
+    <!--bagian class ini adalah 1 layout yang mencangkup semua isinya-->
+    <div class="login-card-container">
+        <!--class login card itu layout login yang menjadi latar nya dan isinya seperti form dan button ada didalam-->
+        <div class="login-card">
+            <!--disini ada class logo khususnya untuk logo yang nantinya diatur di css-->
+            <div class="login-card-logo">
+                <img src="img/Rotatedonut.png" alt="Logo">
+            </div>
+            <!--Ini adalah class header/ title nya-->
+            <div class="login-card-header">
+                <h1>Sign In</h1>
+                <div>Silahkan login sebelum masuk ke website kami</div>
+            </div>
+            <!--disini ada form fungsinya untuk mengumpulkan sebuah input inputan dengan class berikut-->
+            <form class="login-card-form">
+                <!--disini ada class item yg isinya input dan symbols-->
+                <div class="form-item">
+                    <!--disini ada span dengan class material symbols rounded yang nantinya akan memunculkan icon/symbol import dari google symbols yang sudah tertera link di atas-->
+                    <span class="icon material-symbols-rounded">mail</span>
+                    <input type="text" placeholder="Enter Email" required autofocus>
+                </div>
+                <div class="form-item">
+                    <span class="icon material-symbols-rounded">lock</span>
+                    <input type="password" placeholder="Enter Password" required>
+                </div>
+                <!--bagian ini checkbox-->
+                <div class="form-item-other">
+                    <div class="checkbox">
+                        <input type="checkbox" id="remembermecheckbox">
+                        <label for="remembermecheckbox">Remember me</label>
+                    </div>
+                </div>
+                <!--ini bagian button-->
+                <a class="button" type="submit" onclick="disp_alert()">Login</a>
+            </form>
+            <div class="login-card-footer">
+                <!--bagian footer ini ada teks yang nantinya di atur text-align menjadi center dan memiliki link yang menuju ke register-->
+                Belum ada akun? <a href="register.html">Register disini</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function disp_alert()
+        {
+            if (confirm("Succsessful, Login")) 
+            window.location.href = "home.php#hero";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Varo D'Nuts Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/foundation/5.0.2/css/foundation.css'>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  
+  </head>
+<body>
+<main>
+<!-- Start DEMO HTML (Use the following code into your project)-->
+<div class="row">
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#">Keranjang Varo D'Nuts</a></h1>
+            </li>
+        </ul>
+    </nav>
+    <div class="medium-8 columns">
+        <div class="products">
+            <div class="product medium-3 columns" data-name="Alpacone" data-price="4000" data-id="0">
+                <img src="img/Donut/Alpacone.png" alt="Alpacone" />
+                <p>Mede</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+            <div class="product medium-3 columns" data-name="Greentea" data-price="4000" data-id="1">
+                <img src="img/Donut/Mrgreentea.png" alt="Greentea" />
+                <p>Greentea</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+            <div class="product medium-3 columns" data-name="Sprinkle" data-price="4000" data-id="2">
+                <img src="img/Donut/Sprinkle.png"alt="Sprinkle" />
+                <p>Sprinkle</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+            <div class="product medium-3 columns" data-name="Nutcraker" data-price="4000" data-id="3">
+                <img src="img/Donut/Nutcraker.png"alt="Nutcraker" />
+                <p>Kacang</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+            <div class="product medium-3 columns" data-name="Tiramisu" data-price="4000" data-id="4000">
+                <img src="img/Donut/Tiramisu.png" alt="Tiramisu" />
+                <p>Tiramisu</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+            <div class="product medium-3 columns" data-name="Whynut" data-price="4000" data-id="5">
+                <img src="img/Donut/Whynut.png" alt="Whynut" />
+                <p>Capuchino</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+            <div class="product medium-3 columns" data-name="Snowy" data-price="4000" data-id="6">
+                <img src="img/Donut/Snow white.png" alt="Snowy" />
+                <p>Gula Manis</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+            <div class="product medium-3 columns" data-name="Blackhole" data-price="4000" data-id="7">
+                <img src="img/Donut/Blackhole.png"alt="Blackhole" />
+                <p>Bluberry</p>
+                <input type="number" class="count" value="1" />
+                <button class="tiny">Tambahkan</button>
+            </div>
+        </div>
+    </div>
+    <div class="medium-4000  columns">
+        <div class="cart">
+            <h1>Barang Keranjang</h1>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <button class="tiny secondary" id="clear">Hapus Keranjang</button>
+                </div>
+                <div class="medium-6 columns">
+                    <button class="tiny" title="Work in progress">
+                        <a href="form-cvc.html" style="text-decoration:none;color:white;">
+                            Checkout
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <div id="cartItems">Loading cart...</div>
+            Total price: <strong id="totalPrice">Rp. 0</strong>
+        </div>
+    </div>
+
+</div>
+<script type="text/template" id="cartT">
+  <% _.each(items, function (item) { %> <div class = "panel"> <p> <%= item.name %> </p>  <span class="label">
+<%= item.count %> piece<% if(item.count > 1)
+{%>s
+<%}%> for Rp. <%= item.total %></span > </div>
+<% }); %>
+</script>
+
+
+<!-- END EDMO HTML (Happy Coding!)-->
+</main>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+<script  src="script.js"></script>
+      
+</body>
+</html>
